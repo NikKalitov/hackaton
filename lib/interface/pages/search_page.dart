@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:hackaton/interface/widgets/text_field.dart';
 
+import 'schedule_page.dart';
+import 'teacher_page.dart';
+
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
 
@@ -27,7 +30,18 @@ class _SearchPageState extends State<SearchPage> {
             MyTextField(labelText: 'Введите имя'),
             MyTextField(labelText: 'Введите отчество'),
             ElevatedButton(
-              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TeacherPage();
+                    },
+                  ),
+                );
+              },
               child: Text('Найти преподавателя'),
             ),
           ],

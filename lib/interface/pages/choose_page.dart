@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackaton/interface/pages/main_page.dart';
 import 'package:hackaton/interface/pages/schedule_page.dart';
+import 'package:hackaton/interface/pages/teacher_page.dart';
 
 import 'search_page.dart';
 
@@ -58,7 +59,17 @@ class _ChooseSearchState extends State<ChooseSearch> {
                 },
                 child: Text('Поиск по умолчанию'),
               ),
-              // ElevatedButton(onPressed: () {}, child: Text('test')),
+              // ElevatedButton(
+              //     onPressed: () {
+              //       Navigator.of(context).push(
+              //         MaterialPageRoute(
+              //           builder: (context) {
+              //             return TeacherPage();
+              //           },
+              //         ),
+              //       );
+              //     },
+              //     child: Text('test')),
             ],
           ),
         ),

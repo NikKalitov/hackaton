@@ -22,29 +22,43 @@ class _SearchPageState extends State<SearchPage> {
         title: Text('Поиск по ФИО'),
         backgroundColor: Color.fromRGBO(0, 106, 179, 100),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            MyTextField(labelText: 'Введите фамилию'),
-            MyTextField(labelText: 'Введите имя'),
-            MyTextField(labelText: 'Введите отчество'),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return TeacherPage();
-                    },
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.png"),
+                fit: BoxFit.fill)),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MyTextField(labelText: 'Введите фамилию'),
+              MyTextField(labelText: 'Введите имя'),
+              MyTextField(labelText: 'Введите отчество'),
+              FractionallySizedBox(
+                widthFactor: 0.55,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 106, 179, 100),
                   ),
-                );
-              },
-              child: Text('Найти преподавателя'),
-            ),
-          ],
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TeacherPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Row(
+                    children: [
+                      Icon(Icons.search_outlined),
+                      RichText(text: TextSpan(text: "Найти преподователя")),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

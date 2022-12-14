@@ -12,19 +12,22 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: TextField(
-        decoration: InputDecoration(
-          label: Text(labelText),
-          focusColor: Colors.blueGrey,
-          hoverColor: Colors.blueGrey,
-          // fillColor: Colors.blueGrey,
-          // hintText: 'Hint',
-          // focusedBorder: const OutlineInputBorder(
-          //   borderSide: BorderSide(color: Colors.blueGrey, width: 3.0),
-          // ),
-          border: OutlineInputBorder(),
+    return FractionallySizedBox(
+      widthFactor: 0.9,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: TextField(
+          decoration: InputDecoration(
+            label: Text(labelText),
+            focusColor: Colors.blueGrey,
+            hoverColor: Colors.blueGrey,
+            // fillColor: Colors.blueGrey,
+            // hintText: 'Hint',
+            // focusedBorder: const OutlineInputBorder(
+            //   borderSide: BorderSide(color: Colors.blueGrey, width: 3.0),
+            // ),
+            border: OutlineInputBorder(),
+          ),
         ),
       ),
     );

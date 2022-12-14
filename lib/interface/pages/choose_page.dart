@@ -23,54 +23,60 @@ class _ChooseSearchState extends State<ChooseSearch> {
         centerTitle: true,
         title: Text('Выберите способ'),
       ),
-      body: Center(
-        child: IntrinsicWidth(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(0, 106, 179, 100),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.png"),
+                fit: BoxFit.fill)),
+        child: Center(
+          child: IntrinsicWidth(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 106, 179, 100),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SearchPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text('Поиск по ФИО'),
                 ),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SearchPage();
-                      },
-                    ),
-                  );
-                },
-                child: Text('Поиск по ФИО'),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(0, 106, 179, 100),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 106, 179, 100),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MainPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text('Поиск по умолчанию'),
                 ),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return MainPage();
-                      },
-                    ),
-                  );
-                },
-                child: Text('Поиск по умолчанию'),
-              ),
-              // ElevatedButton(
-              //     onPressed: () {
-              //       Navigator.of(context).push(
-              //         MaterialPageRoute(
-              //           builder: (context) {
-              //             return TeacherPage();
-              //           },
-              //         ),
-              //       );
-              //     },
-              //     child: Text('test')),
-            ],
+                // ElevatedButton(
+                //     onPressed: () {
+                //       Navigator.of(context).push(
+                //         MaterialPageRoute(
+                //           builder: (context) {
+                //             return TeacherPage();
+                //           },
+                //         ),
+                //       );
+                //     },
+                //     child: Text('test')),
+              ],
+            ),
           ),
         ),
       ),

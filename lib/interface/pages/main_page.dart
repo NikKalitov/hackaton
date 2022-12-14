@@ -5,6 +5,7 @@ import 'package:hackaton/interface/widgets/check_box.dart';
 import 'package:hackaton/interface/widgets/text_field.dart';
 
 import 'schedule_page.dart';
+import 'teacher_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -22,10 +23,10 @@ class _MainPageState extends State<MainPage> {
     'Международный факультет',
     'Факультет культуры и искусства',
     'Факультет математики, информационных и авиационных технологий',
-    "Инженеро-физический факультет высоких технологий",
+    "Инженерно-физический факультет высоких технологий",
     "Юридический факультет",
     "Факультет гуманитарных наук и социальных технологий",
-    "Факультет культуры и исскуства",
+    "Факультет культуры и искусства",
     "Факультет трансферных специальностей",
     "Заволжский экономико-гуманитарный факультет",
     "Факультет повышения квалификации",
@@ -34,7 +35,6 @@ class _MainPageState extends State<MainPage> {
     "Медицинский факультет",
     "Экологический факультет",
     "Факультет лингвистики, межкультурных связей и профессиональной коммуникации"
-
   ];
   //
   bool showDepart = false;
@@ -67,7 +67,6 @@ class _MainPageState extends State<MainPage> {
     "Шабалкин Дмитрий Юрьевич",
     "Щуров Илья Владимирович",
     "Ярдаева Маргарита Николаевна",
-
   ];
   //
   bool showButton = false;
@@ -218,7 +217,7 @@ class _MainPageState extends State<MainPage> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) {
-                        return SchedulePage();
+                        return TeacherPage();
                       },
                     ),
                   );

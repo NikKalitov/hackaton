@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hackaton/interface/pages/main_page.dart';
+import 'package:hackaton/interface/pages/schedule_page.dart';
 
 import 'search_page.dart';
 
@@ -57,6 +58,7 @@ class _ChooseSearchState extends State<ChooseSearch> {
                 },
                 child: Text('Поиск по умолчанию'),
               ),
+              // ElevatedButton(onPressed: () {}, child: Text('test')),
             ],
           ),
         ),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class SchedulePage extends StatefulWidget {
@@ -17,10 +19,43 @@ class _SchedulePageState extends State<SchedulePage>
     _controller = TabController(length: 2, vsync: this);
   }
 
-  List<Tab> listOfTabs = [];
+  final List<Tab> listOfTabs = [
+    Tab(
+      child: Text('1 неделя'),
+    ),
+    Tab(
+      child: Text('2 неделя'),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(length: _controller.length, child: Scaffold());
+    return DefaultTabController(
+      length: _controller.length,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey,
+          title: Text('Расписание'),
+          centerTitle: true,
+          bottom: TabBar(
+            controller: _controller,
+            indicatorColor: Colors.white,
+            tabs: listOfTabs,
+          ),
+        ),
+        body: TabBarView(
+          controller: _controller,
+          // ignore:
+          children: [
+            Center(
+              child: Text('1'),
+            ),
+            Center(
+              child: Text('2'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

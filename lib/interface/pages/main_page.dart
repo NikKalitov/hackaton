@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:hackaton/interface/widgets/check_box.dart';
 import 'package:hackaton/interface/widgets/text_field.dart';
 
+import 'schedule_page.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -212,7 +214,15 @@ class _MainPageState extends State<MainPage> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueGrey,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SchedulePage();
+                      },
+                    ),
+                  );
+                },
                 child: Text('Узнать расписание'),
               ),
             ),

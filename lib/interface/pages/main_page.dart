@@ -196,7 +196,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   );
                 },
-                child: Text('Узнать расписание'),
+                child: Text('Найти преподавателя'),
               ),
             ),
         ],

@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:hackaton/interface/widgets/text_field.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -19,7 +20,18 @@ class _SearchPageState extends State<SearchPage> {
         backgroundColor: Colors.blueGrey,
       ),
       body: Center(
-        child: Text('Search'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            MyTextField(labelText: 'Введите фамилию'),
+            MyTextField(labelText: 'Введите имя'),
+            MyTextField(labelText: 'Введите отчество'),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Найти преподавателя'),
+            ),
+          ],
+        ),
       ),
     );
   }

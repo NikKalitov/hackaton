@@ -43,17 +43,23 @@ class _SchedulePageState extends State<SchedulePage>
             tabs: listOfTabs,
           ),
         ),
-        body: TabBarView(
-          controller: _controller,
-          // ignore:
-          children: [
-            Center(
-              child: Text('1'),
-            ),
-            Center(
-              child: Text('2'),
-            ),
-          ],
+        body: Container(
+          // decoration: BoxDecoration(
+          //     image: DecorationImage(
+          //         image: AssetImage("assets/images/background.png"),
+          //         fit: BoxFit.fill)),
+          child: TabBarView(
+            controller: _controller,
+            // ignore:
+            children: [
+              Center(
+                child: Text('1'),
+              ),
+              Center(
+                child: Text('2'),
+              ),
+            ],
+          ),
         ),
       ),
     );

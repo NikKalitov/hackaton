@@ -22,9 +22,10 @@ class _LoginPageState extends State<LoginPage> {
         title: Text('Вход'),
       ),
       body: Container(
-        decoration: BoxDecoration(image: DecorationImage(
-            image: AssetImage("assets/images/background.png"))),
-
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.png"),
+                fit: BoxFit.fill)),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(30.0),
@@ -49,14 +50,18 @@ class _LoginPageState extends State<LoginPage> {
                   child: FractionallySizedBox(
                     widthFactor: 0.3,
                     child: Row(
-                      children: [Icon(Icons.arrow_forward_ios_rounded),
-                        SizedBox(width: 10,),
-                        RichText(text: TextSpan(
-                          text: 'Войти',
-                          style: TextStyle(
-fontSize:15,
-                          )
-                        ),),
+                      children: [
+                        Icon(Icons.arrow_forward_ios_rounded),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                              text: 'Войти',
+                              style: TextStyle(
+                                fontSize: 15,
+                              )),
+                        ),
                       ],
                     ),
                   ),

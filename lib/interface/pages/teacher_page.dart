@@ -18,24 +18,30 @@ class _TeacherPageState extends State<TeacherPage> {
         title: Text('Профиль преподавателя'),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                child: Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png',
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.png"),
+                fit: BoxFit.fill)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  child: Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png',
+                  ),
                 ),
-              ),
-              // Image.network('src'),
-            ],
-          ),
-          Center(
-            child: Text('Sample page'),
-          )
-        ],
+                // Image.network('src'),
+              ],
+            ),
+            Center(
+              child: Text('Sample page'),
+            )
+          ],
+        ),
       ),
     );
   }

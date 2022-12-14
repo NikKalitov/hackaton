@@ -13,7 +13,7 @@ class _MyCheckBoxState extends State<MyCheckBox> {
   Widget build(BuildContext context) {
     return Checkbox(
       checkColor: Colors.white,
-      activeColor: Colors.blueGrey,
+      activeColor: const Color.fromRGBO(0, 106, 179, 100),
       value: isChecked,
       onChanged: (value) {
         isChecked = value!;

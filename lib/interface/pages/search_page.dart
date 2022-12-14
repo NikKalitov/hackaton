@@ -19,18 +19,24 @@ class _SearchPageState extends State<SearchPage> {
         title: Text('Поиск по ФИО'),
         backgroundColor: Color.fromRGBO(0, 106, 179, 100),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            MyTextField(labelText: 'Введите фамилию'),
-            MyTextField(labelText: 'Введите имя'),
-            MyTextField(labelText: 'Введите отчество'),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Найти преподавателя'),
-            ),
-          ],
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.png"),
+                fit: BoxFit.fill)),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MyTextField(labelText: 'Введите фамилию'),
+              MyTextField(labelText: 'Введите имя'),
+              MyTextField(labelText: 'Введите отчество'),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Найти преподавателя'),
+              ),
+            ],
+          ),
         ),
       ),
     );

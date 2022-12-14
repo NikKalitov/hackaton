@@ -47,7 +47,12 @@ class _ChooseSearchState extends State<ChooseSearch> {
                       ),
                     );
                   },
-                  child: Text('Поиск по ФИО'),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search_rounded),
+                      Text('Поиск по ФИО')
+                    ],
+                  ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -62,7 +67,12 @@ class _ChooseSearchState extends State<ChooseSearch> {
                       ),
                     );
                   },
-                  child: Text('Поиск по умолчанию'),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search_rounded),
+                      Text('Поиск по умолчанию')
+                    ],
+                  ),
                 ),
                 // ElevatedButton(
                 //     onPressed: () {

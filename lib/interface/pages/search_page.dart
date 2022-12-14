@@ -16,7 +16,7 @@ class _SearchPageState extends State<SearchPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Поиск по ФИО'),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Color.fromRGBO(0, 106, 179, 100),
       ),
       body: Center(
         child: Text('Search'),

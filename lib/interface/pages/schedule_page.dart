@@ -34,7 +34,7 @@ class _SchedulePageState extends State<SchedulePage>
       length: _controller.length,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Color.fromRGBO(0, 106, 179, 100),
           title: Text('Расписание'),
           centerTitle: true,
           bottom: TabBar(

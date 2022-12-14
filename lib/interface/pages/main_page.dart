@@ -77,7 +77,7 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Поиск по умолчанию'),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Color.fromRGBO(0, 106, 179, 100),
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
@@ -89,7 +89,7 @@ class _MainPageState extends State<MainPage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: Colors.blueGrey,
+                  color: Color.fromRGBO(0, 106, 179, 100),
                 ),
               ),
               child: DropdownButtonHideUnderline(
@@ -135,7 +135,7 @@ class _MainPageState extends State<MainPage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Colors.blueGrey,
+                    color: Color.fromRGBO(0, 106, 179, 100),
                   ),
                 ),
                 child: DropdownButtonHideUnderline(
@@ -179,7 +179,7 @@ class _MainPageState extends State<MainPage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Colors.blueGrey,
+                    color: Color.fromRGBO(0, 106, 179, 100),
                   ),
                 ),
                 child: DropdownButtonHideUnderline(
@@ -212,7 +212,7 @@ class _MainPageState extends State<MainPage> {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+                  backgroundColor: Color.fromRGBO(0, 106, 179, 100),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(

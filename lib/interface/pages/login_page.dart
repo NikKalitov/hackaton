@@ -17,34 +17,52 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Color.fromRGBO(0, 106, 179, 100),
         centerTitle: true,
         title: Text('Вход'),
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyTextField(labelText: 'Введите логин'),
-              MyTextField(labelText: 'Введите пароль'),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return ChooseSearch();
-                      },
+      body: Container(
+        decoration: BoxDecoration(image: DecorationImage(
+            image: AssetImage("assets/images/background.png"))),
+
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MyTextField(labelText: 'Введите логин'),
+                MyTextField(labelText: 'Введите пароль'),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ChooseSearch();
+                        },
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 106, 179, 100),
+                  ),
+                  child: FractionallySizedBox(
+                    widthFactor: 0.3,
+                    child: Row(
+                      children: [Icon(Icons.arrow_forward_ios_rounded),
+                        SizedBox(width: 10,),
+                        RichText(text: TextSpan(
+                          text: 'Войти',
+                          style: TextStyle(
+fontSize:15,
+                          )
+                        ),),
+                      ],
                     ),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+                  ),
                 ),
-                child: Text('Войти'),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

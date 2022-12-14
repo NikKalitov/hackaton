@@ -19,7 +19,7 @@ class _ChooseSearchState extends State<ChooseSearch> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Color.fromRGBO(0, 106, 179, 100),
         centerTitle: true,
         title: Text('Выберите способ'),
       ),
@@ -31,7 +31,7 @@ class _ChooseSearchState extends State<ChooseSearch> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+                  backgroundColor: Color.fromRGBO(0, 106, 179, 100),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(
@@ -46,7 +46,7 @@ class _ChooseSearchState extends State<ChooseSearch> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+                  backgroundColor: Color.fromRGBO(0, 106, 179, 100),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(

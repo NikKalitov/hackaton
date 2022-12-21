@@ -48,7 +48,7 @@ class _ChooseSearchState extends State<ChooseSearch> {
                     );
                   },
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(Icons.search_rounded),
                       Text('Поиск по ФИО')
                     ],
